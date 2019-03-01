@@ -20,10 +20,11 @@ Logger = logging.getLogger('silk.collector')
 
 
 def raise_middleware_error():
-    raise RuntimeError(
-        'Silk middleware has not been installed correctly. Ordering must ensure that Silk middleware can '
-        'execute process_request and process_response. If an earlier middleware returns from either of '
-        'these methods, Silk will not have the chance to inspect the request/response objects.')
+    pass
+#     raise RuntimeError(
+#         'Silk middleware has not been installed correctly. Ordering must ensure that Silk middleware can '
+#         'execute process_request and process_response. If an earlier middleware returns from either of '
+#         'these methods, Silk will not have the chance to inspect the request/response objects.')
 
 
 class DataCollector(with_metaclass(Singleton, object)):
